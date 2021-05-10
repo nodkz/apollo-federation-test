@@ -716,10 +716,10 @@
     lodash "4.17.21"
     param-case "3.0.4"
 
-"@graphql-mesh/graphql@^0.17.6":
-  version "0.17.6"
-  resolved "https://registry.yarnpkg.com/@graphql-mesh/graphql/-/graphql-0.17.6.tgz#1c26079d342f9e219d5392dfc11c4b70399549e9"
-  integrity sha512-J9dqd21by7VTO7G45eiM7sPBmwS55ib1R8fwoRvxwbhsL1rreWm9GbEKqiz/dtXN4WtRyL/oZZPd96WrNOnsUw==
+"@graphql-mesh/graphql@0.17.7-alpha-66d9b22d6.0":
+  version "0.17.7-alpha-66d9b22d6.0"
+  resolved "https://registry.yarnpkg.com/@graphql-mesh/graphql/-/graphql-0.17.7-alpha-66d9b22d6.0.tgz#27066c8389b1bc6ae02318414c73f60b65b9ba4a"
+  integrity sha512-B126Ly/0bhhDoqJ6rabB+LfRIg/z75uO/Abpn9YHf/KB8iHRvByvdD2V5bcAfFoxpPWDZQJ6lbsOT79ppwFLFQ==
   dependencies:
     "@graphql-mesh/types" "0.42.0"
     "@graphql-mesh/utils" "0.11.3"

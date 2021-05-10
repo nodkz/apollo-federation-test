@@ -1,0 +1,31 @@
+schema @core(feature: "https://specs.apollo.dev/core/v0.1") @core(feature: "https://specs.apollo.dev/join/v0.1") {
+  query: Query
+}
+
+type Article @join__owner(graph: ARTICLES) @join__type(graph: ARTICLES, key: "id") @join__type(graph: COMMENTS, key: "id") {
+  id: ID! @join__field(graph: ARTICLES)
+  title: String @join__field(graph: ARTICLES)
+  authorId: Int @join__field(graph: ARTICLES)
+  author: User @join__field(graph: ARTICLES)
+  comments: [Comment] @join__field(graph: COMMENTS)
+}
+
+type Comment @join__owner(graph: COMMENTS) @join__type(graph: COMMENTS, key: "id") {
+  id: ID! @join__field(graph: COMMENTS)
+  text: String @join__field(graph: COMMENTS)
+  articleId: Int @join__field(graph: COMMENTS)
+  article: Article @join__field(graph: COMMENTS)
+  authorId: Int @join__field(graph: COMMENTS)
+  author: User @join__field(graph: COMMENTS)
+}
+
+type Query {
+  comments: [Comment] @join__field(graph: COMMENTS)
+  articles: [Article] @join__field(graph: ARTICLES)
+  me: User @join__field(graph: USERS)
+}
+
+type User @join__owner(graph: USERS) @join__type(graph: USERS, key: "id") @join__type(graph: COMMENTS, key: "id") @join__type(graph: ARTICLES, key: "id") {
+  id: ID! @join__field(graph: USERS)
+  username: String @join__field(graph: USERS)
+}

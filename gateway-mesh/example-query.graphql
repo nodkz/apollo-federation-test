@@ -1,0 +1,13 @@
+{
+  articles {
+    id
+    title
+    author {
+      username
+    }
+    comments {
+      id
+      text
+    }
+  } 
+}

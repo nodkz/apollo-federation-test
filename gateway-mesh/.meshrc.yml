@@ -1,0 +1,20 @@
+merger: federation
+introspectionCache: ./introspectionCache.json
+sources:
+  - name: users
+    handler:
+      graphql:
+        endpoint: http://localhost:4001/graphql
+  - name: articles
+    handler:
+      graphql:
+        endpoint: http://localhost:4002/graphql
+  - name: comments
+    handler:
+      graphql:
+        endpoint: http://localhost:4003/graphql
+
+serve: 
+  port: 5000
+  browser: false
+  exampleQuery: example-query.graphql
